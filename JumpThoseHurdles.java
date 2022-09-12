@@ -17,6 +17,10 @@ public class JumpThoseHurdles {
 
   ArrayList<Integer> height = new ArrayList<Integer>();
 
+  public int hurdlesTraveled;
+
+
+
   public void start() {
     loadWorld();
 
@@ -54,7 +58,7 @@ public class JumpThoseHurdles {
 	else {
 	System.out.println("The minimum distance between all of the hurdles is " + Collections.min(length) + " blocks long.");
 	System.out.println("The max height of all the hurdles is " + Collections.max(height) + " blocks long.");
-	;
+  System.out.println("The number of hurdles is " + hurdlesTraveled + ".");
 	}
     
       
@@ -146,5 +150,6 @@ public class JumpThoseHurdles {
       }
     }
     height.add(count);
+    hurdlesTraveled += 1;
   }
 }
